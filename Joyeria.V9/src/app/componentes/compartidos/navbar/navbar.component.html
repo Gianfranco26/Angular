@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      </button>
+  <a class="navbar-brand" [routerLink]="['inicio']" ><img src="assets/imagenes/logo-joyeriafernandez.png" alt="logo" id="logobanner"></a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <hr class="divisor">
+      <li class="nav-item active">
+        <img src="assets/imagenes/home.png" class="imgmenu" alt="home">
+        <a class="nav-link" [routerLink]="['inicio']">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <hr class="divisor">
+      <li class="nav-item">
+        <img src="assets/imagenes/catalogo.png" class="imgmenu" alt="catalogo">
+        <a class="nav-link" [routerLink]="['catalogo']">Catálogo</a>
+      </li>
+      <hr class="divisor">
+      <li class="nav-item">
+        <img src="assets/imagenes/nosotros.png" class="imgmenu" alt="nosotros">
+        <a class="nav-link" [routerLink]="['nosotros']">Nosotros</a>
+      </li>
+      <hr class="divisor">
+      <li class="nav-item">
+        <img src="assets/imagenes/carrito.png" class="imgmenu" alt="carrito">
+        <a class="nav-link" routerLink='/shopping-cart'>
+          Carrito
+          <span class="badge badge-pill badge-primary " *ngIf="cart$ | async as cart">
+         {{ cart.totalItemsCount }}  <i class="fas fa-shopping-cart"></i>
+          </span>
+        </a>
+      </li>
+      <hr class="divisor">
+    </ul>
+
+    <ul class="navbar-nav ">
+      <ng-template #anonymousUser>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/login'><i class="fas fa-sign-in-alt"></i>
+
+Inicio de sesión</a>
+        </li>
+      </ng-template>
+      <li  *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
+     <a  class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user"></i>     {{ appUser.name }}
+     </a>
+     <div  class="dropdown-menu" aria-labelledby="dropdown01">
+         <a class="dropdown-item" routerLink="/my/orders">Mis ordenes</a>
+         <a class="dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt"></i>
+Cerrar sesión</a>
+      </div>
+      </li>
+    </ul>
+<hr class="divisor">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+
+  </div>
+  <script>
+  function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+</nav>

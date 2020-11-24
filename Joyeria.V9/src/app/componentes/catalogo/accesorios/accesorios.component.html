@@ -1,0 +1,22 @@
+<br>
+<div class="container">
+<h3>Accesorios</h3>
+<br>
+</div>
+<div class="container">
+  <div class="row" *ngIf="cart$ | async as cart">
+  <div class="container">
+  
+  <accesory-filter [category]="category" ></accesory-filter>
+  
+  <br>
+  <br>
+  </div>
+  <div class="col-md-4" *ngFor="let p of filteredAccesories; let i = index">
+    <accesory-card [accesory]="p" [shopping-cart]="cart"></accesory-card>
+</div>
+<div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+
+
+</div>
+</div> 

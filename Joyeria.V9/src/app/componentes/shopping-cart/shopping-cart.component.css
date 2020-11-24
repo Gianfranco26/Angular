@@ -1,0 +1,35 @@
+#carrodecompras{
+    text-align: center;
+}
+.table td, .table th {
+    padding: 0px;
+    vertical-align: center;
+    border-top: 1px solid #dee2e6;
+}
+.table thead th {
+    background-color: #3C545D;
+    text-align: center;
+    color: white;
+}
+.btn-block {
+    margin: 10px 0px;
+    background-color: #DDC264;
+    border-width: 0px;
+    color: black;
+}
+
+.breadcrumb{
+    background: none;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: -25px;
+  }
+  
+  .breadcrumb-item{
+    color: black;
+  }
+
+  .btn-sm{
+      background-color: #DDC264;
+      border-radius: 5px;
+  }

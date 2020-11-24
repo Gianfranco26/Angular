@@ -1,0 +1,33 @@
+.row {
+  margin-left: 20px;
+}
+.container {
+  padding-left: 0px;
+}
+.col-md-6 {
+  margin-bottom: 30px;
+}
+.card {
+  text-align: center;
+  border-color: #DDC264;
+  border-width: medium;
+}
+.btn-primary {
+  background-color:#3C545D;
+  border-color: #3C545D;
+}
+
+.breadcrumb{
+  background: none;
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-bottom: -25px;
+}
+
+.breadcrumb-item{
+  color: black;
+}
+
+.Catalogo{
+  margin-left: 15px;
+}
