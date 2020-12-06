@@ -1,0 +1,100 @@
+:host /deep/ .card {
+  width: 100%;
+  height: 160px;
+  background-color: #fff;
+  background: rgb(245, 245, 245);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  border-color: #DDC264;
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px;
+  border-width: medium;
+}
+
+:host /deep/ .card h5 {
+  text-align: center;
+}
+
+:host /deep/ .card .card-body {
+    height: 100%;
+    border-radius: 6px;
+}
+
+:host /deep/ .card .card-body .card-img-top {
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+:host /deep/ .card .card-body .card-title {
+  width: 190px;
+  float: left;
+  position: absolute;
+  height: 100%;
+  left: 110px;
+}
+
+:host /deep/ .card .card-body .card-title h5{
+  width: 190px;
+  float: left;
+  position: absolute;
+  left: 10px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+:host /deep/ .card .card-body .card-title p {
+  color: black;
+  margin-bottom: 0;
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+:host /deep/ .card .card-body .card-text {
+  margin: 0 2rem;
+  color: black;
+  font-size: 11px;
+  position: relative;
+  top: 45px;
+  width: inherit;
+}
+
+:host /deep/ .card .card-body .card-text span + span {
+  float: right;
+}
+
+:host /deep/ .card .card-body .card-price {
+  font-weight: 500;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1%;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+:host /deep/ .imagen {
+  width: 35%;
+  top: 14%;
+  position: relative;
+  border-radius: 10px;
+}
+
+:host /deep/ .btn-primary {
+  background-color: #3C545D;
+  border-color: #3C545D;
+  color: white;
+  left: 115px;
+  top: 67px;
+  position: relative;
+  font-size: 9px;
+  border-radius: 10px;
+  width: auto;
+  margin-left: 2%;
+}
+:host /deep/ .card-body {
+  padding: 6px;
+}

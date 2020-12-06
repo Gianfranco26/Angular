@@ -1,0 +1,61 @@
+<div class="container">
+<br>
+  <h4 class="card-title">Detalles de orden</h4>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="inicio" style="color: rgb(146, 146, 146);">Inicio</a></li>
+<li class="breadcrumb-item"><a href="my/orders" style="color: rgb(146, 146, 146);">Mis ordenes</a></li>
+<li class="breadcrumb-item active" aria-current="page">Detalle</li>
+</ol>
+</nav>
+<br>
+
+  <div class="col-12">
+    <ng-container *ngIf="order$ | async as order">
+      <ng-container *ngIf="order.items" ; else notFound>
+        <div class="card">
+          <div class="card-body">
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="font-weight-bold">Nombre:</span> {{order.shipping.name}}
+              </li>
+              <li class="list-group-item">
+                <span class="font-weight-bold">Fecha de la orden:</span> {{order.datePlaced | date}}
+              </li>
+              <li class="list-group-item"><span class="font-weight-bold">Orden:</span>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let item of order.items">
+                      {{item.product.title}} x {{item.quantity}} {{item.price | currency:'CLP':'symbol-narrow'}}
+                      <div class="float-right">{{item.totalPrice | currency:'CLP':'symbol-narrow'}}</div>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="font-weight-bold">Total: </span>
+                        <div class="float-right">{{order.totalSale | currency:'CLP':'symbol-narrow'}}</div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list-group-item"><span class="font-weight-bold">Dirección de despacho:</span>
+                <div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Nombre : {{order.shipping.name}}</li>
+                    <li class="list-group-item"> Dirección: {{order.shipping.addressLine1}}</li>
+                    <li class="list-group-item"> N Depto o casa : {{order.shipping.addressLine2}}</li>
+                    <li class="list-group-item"> Comuna : {{order.shipping.addressLine3}}</li>
+                    <li class="list-group-item"> Ciudad : {{order.shipping.city}}</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #notFound>
+        No se encontró orden.
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
+

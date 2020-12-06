@@ -1,0 +1,24 @@
+.card-text{
+    font-size: 14px;
+  }
+  
+  .list-group-item{
+  
+  font-size: 12px;
+  
+  }
+
+  .card{
+    background-color: #3C545D;
+    color: white;
+  }
+  
+  .list-group-item{
+    background-color: #3C545D;
+    color: white;
+    border-color: white;
+  }
+
+  .float-right{
+    color: white;
+  }

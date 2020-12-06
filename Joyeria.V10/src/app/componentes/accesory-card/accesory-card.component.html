@@ -1,0 +1,24 @@
+<div *ngIf="accesory.title" class="card">
+    <div class="card-body">
+      <div class="card-img-top">
+
+      <img *ngIf="accesory.imageUrl" class="imagen" [src]="accesory.imageUrl" alt="Card image cap">
+
+      </div>
+      <div class="card-title">
+      <h5>{{ accesory.title }}</h5>
+      <div class="card-text">
+        <span>{{ accesory.description}} </span>
+      </div>
+
+    <div *ngIf="shoppingCart">
+      <p class="card-price">{{ accesory.price | currency:'CLP ':true }}</p>
+      <!-- <a href="#" class="btn btn-primary">Comprar ahora</a> , antiguo boton que decia comprar ahora-->
+            <button
+            *ngIf="shoppingCart.getQuantity(accesory) >= 0; else updateQuantity"
+                (click)="addToCart()"
+                class="btn btn-primary btn-block">Agregar a carrito</button>
+        </div>
+        </div>
+      </div>
+  </div>

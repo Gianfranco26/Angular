@@ -1,0 +1,13 @@
+#dropdownMenuButton{
+    background: rgb(247, 247, 247);
+    border-width: 1px;
+    border-color:  rgb(241, 241, 241);
+}
+
+.breadcrumb{
+    background: none;
+}
+
+.breadcrumb-item{
+    color: black;
+}

@@ -1,0 +1,53 @@
+.foot{
+    background-color: black;
+}
+.logojoyeriafoot{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 75px;
+}
+.politicsypreguntas{
+    margin-top: 30px;
+    font-size: 14px;
+
+}
+.politics{
+    float: left;
+    color: white;
+    margin-left: 30px;
+}
+.preguntas{
+    float: right;
+    color: white;
+    margin-right: 30px;
+}
+.Contactoymedia{
+    font-size: 14px;
+    text-align: center;
+}
+.contacto{
+    color: white;
+}
+.divisorfoot{
+    border-color: white;
+    border-width: thin;
+    width: 90%;
+}
+.ubi{
+    text-align: left;
+    font-size: 9px;
+    color: white;
+    margin-top: 5px;
+}
+#insta{
+    margin-right: 20px;
+    margin-top: -90px;
+    width: 15%;
+    float: right;
+}
+#facebook{
+    margin-right: 90px;
+    margin-top: -90px;
+    width: 15%;
+    float: right;
+}

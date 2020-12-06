@@ -1,0 +1,41 @@
+<br>
+<div class="container">
+<h2 style="text-align: center;">Check out, resumen y datos de despacho</h2>
+</div>
+<br>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="inicio" style="color: rgb(146, 146, 146);">Inicio</a></li>
+  <li class="breadcrumb-item"><a href="shopping-cart" style="color: rgb(146, 146, 146);">Carrito</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Envio</li>
+  </ol>
+  </nav>
+
+<div class="row" *ngIf="cart$ | async as cart">
+
+  <div class="col-12">
+    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+  </div>
+
+
+<div class="container">
+  <div class="card" >
+<br>
+<div class="card-body">
+
+<h3 class="card-title">Datos para despacho</h3>
+
+
+
+  <div class="col-12">
+
+    <shipping-form [cart]="cart"></shipping-form>
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
