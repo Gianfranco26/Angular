@@ -1,0 +1,26 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="inicio" style="color: rgb(146, 146, 146);">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="catalogo" style="color: rgb(146, 146, 146);">Catalogo</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Productos</li>
+  </ol>
+</nav>
+
+<div class="row">
+    <div class="col">
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Seleccione productos por categoría</button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" [class.active]="!category" routerLink="/productos">Todos los productos</a>
+
+
+          <button class="dropdown-item" *ngFor="let c of categoriaproductos$ | async" routerLink="/productos"
+              [queryParams]="{ category: c.$key }"
+              class="list-group-item list-group-item-action"
+              [class.active]="category === c.$key">  {{ c.name }}</button>
+
+        </div>
+      </div>
+    </div>
+  <br>

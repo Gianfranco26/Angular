@@ -1,0 +1,17 @@
+.card-text{
+    font-size: 14px;
+  }
+  
+  .list-group-item{
+  
+  font-size: 12px;
+  
+  }
+
+  .breadcrumb{
+    background: none;
+  }
+  
+  .breadcrumb-item{
+    color: black;
+  }

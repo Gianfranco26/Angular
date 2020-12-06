@@ -1,0 +1,8 @@
+.breadcrumb{
+    background: none;
+    margin-top: 25px;
+  }
+  
+  .breadcrumb-item{
+    color: black;
+  }

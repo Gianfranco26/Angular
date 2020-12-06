@@ -1,0 +1,40 @@
+body{
+    font-family: 'Roboto';
+  }
+  .homeimg{
+    margin-top: -80px;
+  }
+  .nosotrosinf{
+      text-align: center;
+      margin: 40px;
+  }
+  .us{
+      color: #000;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+  }
+  .usinfo{
+    color: #757575;
+    font-size: 16px;
+}
+.divisorbody{
+    border-color: #DDC264;
+    border-width: thick;
+    width: 70%;
+    border-radius: 20px;
+}
+.card {
+  border-color: #DDC264;
+  border-width: medium;
+}
+.container {
+  padding-left: 0px;
+}
+.col-md-6 {
+  margin-bottom: 30px;
+}
+.btn-primary {
+  background-color:#3C545D;
+  border-color: #3C545D;
+}
